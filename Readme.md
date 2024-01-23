@@ -12,6 +12,8 @@ cargo install diesel_cli --no-default-features --features postgres
 
 ### Setup
 
+To run the setup command, you must have a DATABASE_URL environment variable set. This should be a URL in the form postgres://[user[:password]@]host/database_name.
+
 ```bash
 diesel setup
 ```
