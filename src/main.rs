@@ -35,7 +35,7 @@ fn main() {
         .expect("Error saving new post");
 
     // SELECT * FROM posts;
-    let posts_result = posts::dsl::posts
+    let posts_result = posts::table
         .load::<Post>(&mut conn)
         .expect("Error loading posts");
 
