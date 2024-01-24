@@ -6,5 +6,5 @@ mod schema;
 mod models;
 
 fn main() {
-    orm_examples::run();
+    println!("Hello, world!");
 }
