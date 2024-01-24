@@ -1,6 +1,6 @@
 use crate::schema::posts;
 
-#[derive(Queryable)]
+#[derive(Queryable, Debug)]
 pub struct Post {
     pub id: i32,
     pub title: String,
@@ -14,4 +14,10 @@ pub struct NewPost<'a> {
     pub title: &'a str,
     pub slug: &'a str,
     pub body: &'a str,
+}
+
+#[derive(Queryable, Debug)]
+pub struct SimplePost {
+    pub id: i32,
+    pub title: String,
 }
