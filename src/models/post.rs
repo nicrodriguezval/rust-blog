@@ -1,4 +1,4 @@
-use diesel::Queryable;
+use crate::schema::posts;
 
 #[derive(Queryable)]
 pub struct Post {
@@ -6,4 +6,12 @@ pub struct Post {
     pub title: String,
     pub slug : String,
     pub body: String,
+}
+
+#[derive(Insertable)]
+#[table_name="posts"]
+pub struct NewPost<'a> {
+    pub title: &'a str,
+    pub slug : &'a str,
+    pub body: &'a str,
 }
